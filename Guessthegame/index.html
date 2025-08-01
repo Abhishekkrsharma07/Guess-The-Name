@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Item Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Guess The Item Game</h1>
+    <div id="creator">Created by Abhishek Kumar Sharma</div>
+
+    <div id="player-setup">
+        <p>How many players? (1-4)</p>
+        <input type="number" id="player-count" min="1" max="4">
+        <button class="vibrant" onclick="setupPlayers()">Submit</button>
+        <div id="player-names"></div>
+    </div>
+
+    <div id="game-area" style="display:none">
+        <div class="question-box">
+            <p id="hint"></p>
+            <input type="text" id="answer-input" placeholder="Your guess here">
+            <button class="vibrant" onclick="submitAnswer()">Submit Answer</button>
+        </div>
+        <p id="current-player"></p>
+    </div>
+
+    <div class="scoreboard" id="scoreboard" style="display:none">
+        <h2>Scores:</h2>
+        <ul id="score-list"></ul>
+    </div>
+
+    <script src="creator.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
